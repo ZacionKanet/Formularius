@@ -1,6 +1,6 @@
 jQuery.validator.addMethod("noSpace", function(value, element) { 
     return value == '' || value.trim().length != 0;  
-}, "No space please and don't leave it empty");
+}, "No use espacios y no deje en blanco este campo");
 jQuery.validator.addMethod("customEmail", function(value, element) { 
   return this.optional( element ) || /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test( value ); 
 }, "Please enter valid email address!");
@@ -10,6 +10,8 @@ return this.optional( element ) || /^\w+$/i.test( value );
 jQuery.extend(jQuery.validator.messages, {
     required: "Este campo es requerido.",
 });
+
+
 var $registrationForm = $('#registration');
 if($registrationForm.length){
   $registrationForm.validate({
@@ -76,6 +78,8 @@ if($registrationForm.length){
             minlength: 9,
             maxlength: 12
           },
+          carta: {
+            required: true
       },
       messages:{            //mensajes de error para el campo mencionado
           rut: {
@@ -100,7 +104,8 @@ if($registrationForm.length){
         },
           edad: {
               required: 'Por favor ingrese edad!',
-              Range: 'Por favor ingrese una edad entre 18 y 35 años!'
+              Range: 'Por favor ingrese una edad entre 18 y 35 años!',
+              number: 'Por favor ingrese un número'
           },
           password: {
               required: 'Please enter password!'

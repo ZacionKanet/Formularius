@@ -31,6 +31,9 @@
                         <br/>
                         <input type = "number" class = "form-control" name = "edad" placeholder = "Edad"/>
                         <br/>
+                        <label for="fnac">Fecha de Nacimiento</label>
+                        <input type = "date" class = "form-control" name = "fnac" placeholder = "20-04-2023"/>
+                        <br/>
                         <div class = "gender">
                             <label for="gender">Seleccione su Género</label>
                         <br/>
@@ -38,13 +41,25 @@
 							<label class="radio-inline"><input type="radio" name="gender" class = "form-contorl"/>Femenino</label>       
                         </div>
                         <br/>
+                        <label for="email">Email:</label>
+                        <br/>
+                        <input type="email" name="email" id="email" placeholder="mail@dominio.com">
+                        <br/>
+                        <label for="telefono">Teléfono:</label>                   
+                        <br/>
                         <input type = "number" class = "form-control" name = "telefono" placeholder = "Teléfono"/>
                         <br/>
-                        <input type = "textarea" class = "form-control" name = "carta" placeholder = "Carta"/>
+                        <label for="profesion">Profesión:</label>    
+                        <input type = "text" class = "form-control" name = "profesion" placeholder = "Profesión"/>
+                        <br/>
+                        <label for="carta">Escriba su motivo para postular a este trabajo:</label>
+                        <br/>
+                        <textarea type = "textarea" class = "form-control" name = "carta" placeholder = "Motivos"></textarea>
                         <br/>
                         <button type = "submit" class = "btn btn-primary">Enviar</button>
-                        <button type = "" class = "btn btn-secondary">Crear Carta</button>
                     </form>
+                    <p><input type="button" name="boton01" id="boton01" value="Generar carta de presentación"></p>
+                    <p id="parrafo">Presione el botón para generar una carta de presentación con los datos ingresados</p>
                 </div>
             </div>
         </div>

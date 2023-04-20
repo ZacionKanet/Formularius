@@ -11,6 +11,11 @@ jQuery.extend(jQuery.validator.messages, {
     required: "Este campo es requerido.",
 });
 
+$(document).ready(function(){
+	$("#boton01").click(function(){
+		$("#parrafo").text('Texto de sustitución ',$registrationForm.carta);
+	});
+});
 
 var $registrationForm = $('#registration');
 if($registrationForm.length){
@@ -36,7 +41,7 @@ if($registrationForm.length){
             minlength: 3,
             maxlength: 20
             },
-        amaterno: {
+          amaterno: {
             required: true,
             alphanumeric: true,
             minlength: 3,
@@ -45,42 +50,46 @@ if($registrationForm.length){
           edad: {
               required: true,
               Range:[18,35]
-          },
+            },
+          email: {
+            required: true,
+            customEmail: true
+            },
           password: {
               required: true
-          },
+            },
           confirm: {
               required: true,
               equalTo: '#password'
-          },
+            },
           fname: {
               required: true,
               noSpace: true
-          },
+            },
           lname: {
               required: true,
               noSpace: true
-          },
+            },
           gender: {
               required: true
-          },
-          hobbies: {
+            },
+          profesion: {
               required: true
-          },
-          country: {
+            },
+          edad: {
               required: true
-          },
+            },
           address: {
               required: true
-          },
-        telefono: {
+            },
+          telefono: {
             required: true,
             minlength: 9,
             maxlength: 12
-          },
+            },
           carta: {
             required: true
-      },
+            },
       messages:{            //mensajes de error para el campo mencionado
           rut: {
             required: 'Ingrese rut del usuario!',
@@ -120,8 +129,8 @@ if($registrationForm.length){
           lname: {
               required: 'Please enter last name!'
           },
-          country: {
-              required: 'Please select country!'
+          profesion: {
+              required: 'Ingrese su profesión!'
           },
           address: {
               required: 'Please enter address!'
@@ -148,5 +157,5 @@ if($registrationForm.length){
         
        }
        
-  });
+    }});
 }
